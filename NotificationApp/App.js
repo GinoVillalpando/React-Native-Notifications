@@ -2,6 +2,8 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
+ * 
+ * @author Gino Villalpando @ GinoVillalpandoWork@gmail.com
  * @format
  * @flow
  */
@@ -32,7 +34,7 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
+          {/* <Header /> */}
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
@@ -40,10 +42,10 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionTitle}>Hey I Did It</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                Gino's <Text style={styles.highlight}>First</Text> installation of React-Native on an 
+                android emulator using virtualization 
               </Text>
             </View>
             <View style={styles.sectionContainer}>
