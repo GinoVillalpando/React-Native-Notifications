@@ -13,7 +13,7 @@ import { StyleSheet, View, Text } from 'react-native';
 const App = () =>  {
   return (
     <>
-      <View style={styles.div}>
+      <View style={styles.div }>
         <Text style={styles.text}>Grievxus Productions</Text>
       </View>
       
