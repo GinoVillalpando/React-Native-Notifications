@@ -9,7 +9,7 @@ const PartList = ({item}) => {
         <TouchableOpacity style={styles.pcItem}>
             <View style={styles.pcItemView}>
                 <Text style={styles.pcItemText}>{item.text}</Text>
-                <Icon name="remove-alt" size={20} color="firebrick"/>
+                <Icon name="remove" size={20} color="red"/>
             </View>
         </TouchableOpacity>
         </>
