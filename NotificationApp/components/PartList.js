@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 const PartList = ({item}) => {
@@ -9,6 +9,7 @@ const PartList = ({item}) => {
         <TouchableOpacity style={styles.pcItem}>
             <View style={styles.pcItemView}>
                 <Text style={styles.pcItemText}>{item.text}</Text>
+                <Icon name="remove-alt" size={20} color="firebrick"/>
             </View>
         </TouchableOpacity>
         </>
