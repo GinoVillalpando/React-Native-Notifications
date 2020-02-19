@@ -11,6 +11,7 @@ import React, {useState} from 'react';
 import { StyleSheet, View, Text, Image, FlatList } from 'react-native';
 import Header from './components/Header'
 import { uuid } from 'uuidv4';
+import PartList from './components/PartList'
 
 
 const App = () =>  {
@@ -28,10 +29,12 @@ const App = () =>  {
   return (
     <>
       <Header name="Notification App"/>
-      <FlatList data={pcItems} renderItem={({item}) => <Text>{item.text}</Text>}></FlatList>
+      <FlatList data={pcItems} 
+                renderItem={({item}) => <PartList item={item}/>}
+                />
       <View style={styles.div}>
         <Text style={styles.text}>Grievxus Productions</Text>
-        <Image source={{uri: 'https://randomuser.me/api/portraits/men/8.jpg'}} 
+        <Image source={{uri: 'https://randomuser.me/api/portraits/men/12.jpg'}} 
                style={styles.img}/>
       </View>
       
