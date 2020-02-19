@@ -43,7 +43,7 @@ const App = () =>  {
 
   return (
     <>
-      <Header name="Notification App"/>
+      <Header name="I Need PC Parts"/>
       <FlatList data={pcItems} 
                 renderItem={({item}) => <PartList item={item} deletePart={deletePart}/>}
                 />
