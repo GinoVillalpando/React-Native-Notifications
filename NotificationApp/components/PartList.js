@@ -2,14 +2,19 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+// component that makes up the list for the FlatList component in app.js
+const PartList = ({item, deletePart}) => {
 
-const PartList = ({item}) => {
     return (
         <>
         <TouchableOpacity style={styles.pcItem}>
             <View style={styles.pcItemView}>
                 <Text style={styles.pcItemText}>{item.text}</Text>
-                <Icon name="remove" size={20} color="red"/>
+                <Icon name="remove" 
+                      size={20} 
+                      color="red" 
+                      onPress={() => deletePart(item.id)}
+                      />
             </View>
         </TouchableOpacity>
         </>

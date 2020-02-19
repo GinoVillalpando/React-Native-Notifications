@@ -12,10 +12,12 @@ import { StyleSheet, View, Text, Image, FlatList } from 'react-native';
 import Header from './components/Header'
 import { uuid } from 'uuidv4';
 import PartList from './components/PartList'
+import AddPart from './components/AddPart'
 
 
 const App = () =>  {
 
+  // create the state that will be used in the list
   const [pcItems, setPcItems] = useState([
     {id: uuid(), text: "Graphics Card"},
     {id: uuid(), text: "CPU"},
@@ -26,17 +28,26 @@ const App = () =>  {
     {id: uuid(), text: "Case"},
   ]);
 
+  // function that deletes a pc part
+  const deletePart = (id) => {
+    setPcItems(prevParts => {
+      return prevParts.filter(item => item.id != id);
+    });
+  }
+
+  const addPart = (text) => {
+    setPcItems(prevParts => {
+      return [{id: uuid(), text}, ...prevParts];
+    })
+  }
+
   return (
     <>
       <Header name="Notification App"/>
       <FlatList data={pcItems} 
-                renderItem={({item}) => <PartList item={item}/>}
+                renderItem={({item}) => <PartList item={item} deletePart={deletePart}/>}
                 />
-      <View style={styles.div}>
-        <Text style={styles.text}>Grievxus Productions</Text>
-        <Image source={{uri: 'https://randomuser.me/api/portraits/men/12.jpg'}} 
-               style={styles.img}/>
-      </View>
+          <AddPart addPart={addPart}/>
       
     </>
   );
