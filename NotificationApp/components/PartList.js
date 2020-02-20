@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     pcItemText: {
-        fontSize: 18,
+        fontSize: 19,
     },
 })
 
